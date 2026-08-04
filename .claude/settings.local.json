@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:gist.github.com)",
+      "Bash(cp \"E:/[Study.Books]/[dev]/PHP/\\(noDRM\\)처음부터 제대로 배우는 라라벨 - 맷 스타우퍼.pdf\" \"/c/Users/iamone/Documents/Obsidian Vault/laravel-ddd/sources/2026-07-11_처음부터 제대로 배우는 라라벨.pdf\" *)",
+      "Bash(python -c ' *)",
+      "Bash(pip install *)",
+      "Bash(where python *)",
+      "Bash(where python3 *)",
+      "Bash(py -0)",
+      "Bash(where py *)",
+      "Bash(\"/c/Users/iamone/AppData/Local/Programs/Python/Python314/python.exe\" -m pip install pypdf -q)",
+      "Bash(/c/Users/iamone/AppData/Local/Programs/Python/Python314/python.exe -c ' *)",
+      "Bash(wc -l /tmp_extract.txt)",
+      "Bash(ls -la /tmp_extract.txt)",
+      "Bash(mkdir -p /c/Users/iamone/AppData/Local/Temp/claude/C--Users-iamone-Documents-Obsidian-Vault-laravel-ddd/cec29ad2-6dd7-44b8-bd04-8b7ef891c311/scratchpad)",
+      "Bash(cd \"/c/Users/iamone/Documents/Obsidian Vault/laravel-ddd\")",
+      "Read(//c/Users/iamone/AppData/Local/Temp/claude/C--Users-iamone-Documents-Obsidian-Vault-laravel-ddd/cec29ad2-6dd7-44b8-bd04-8b7ef891c311/scratchpad/**)",
+      "Bash(cp \"C:/Users/iamone/Downloads/laravel-boost-완전정복.md\" \"C:/Users/iamone/Documents/Obsidian Vault/laravel-ddd/sources/2026-07-29_Laravel Boost 완전정복.md\" && ls \"C:/Users/iamone/Documents/Obsidian Vault/laravel-ddd/sources/\" | grep -i boost)",
+      "Bash(mv \"/c/Users/iamone/Documents/Obsidian Vault/laravel-ddd\" \"/c/Users/iamone/Documents/Obsidian Vault/laravel\")",
+      "Read(//c/Users/iamone/Documents/Obsidian Vault//**)",
+      "PowerShell(Get-Process | Where-Object { $_.MainWindowTitle -match 'Obsidian' -or $_.ProcessName -match 'Obsidian' } | Select-Object ProcessName, Id, MainWindowTitle)",
+      "PowerShell(Get-Process | Where-Object { $_.ProcessName -match 'OneDrive|Dropbox|SearchIndexer|Everything|mintty|bash|node|Code|explorer' } | Select-Object ProcessName, Id)",
+      "PowerShell(Get-Process | Where-Object { $_.ProcessName -match 'cmd|powershell|WindowsTerminal|conhost|explorer|bash|mintty|Code|obsidian' } | Select-Object ProcessName, Id, StartTime | Format-Table -AutoSize)",
+      "PowerShell(Get-CimInstance Win32_Process -Filter \"Name='cmd.exe'\")",
+      "PowerShell(Get-CimInstance Win32_Process | Where-Object { $_.ExecutablePath -match 'Git|bash|mintty' -or $_.Name -match 'bash|sh.exe' } | Select-Object ProcessId, Name, ExecutablePath, ParentProcessId | Format-Table -AutoSize)",
+      "PowerShell(Get-CimInstance Win32_Process | Where-Object { $_.Name -match 'Claude|node' } | Select-Object ProcessId, Name, CommandLine | Format-List)",
+      "WebFetch(domain:spatie.be)",
+      "WebFetch(domain:byzz.tistory.com)",
+      "Bash(gh api *)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:api.github.com)",
+      "mcp__ba522c5f-4e0f-4a72-8cab-8f5e807988a2__create_file",
+      "mcp__ba522c5f-4e0f-4a72-8cab-8f5e807988a2__get_file_metadata",
+      "Bash(cp \"C:\\\\Users\\\\iamone\\\\Downloads\\\\tailwind-css-guide.md\" \"C:\\\\Users\\\\iamone\\\\Documents\\\\Obsidian Vault\\\\laravel-ddd\\\\sources\\\\2026-08-03_Tailwind CSS 실전 가이드.md\")",
+      "WebSearch",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:graphify.net)"
+    ]
+  }
+}
