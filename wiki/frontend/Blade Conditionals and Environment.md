@@ -97,7 +97,7 @@ HTML `<form>`은 `GET`/`POST`만 지원하므로, `@method`가 hidden input(`_me
 
 - `@method`를 `<form>` 태그 바깥에 두면 hidden input이 생성되어도 라우터가 인식하지 못한다.
 - `@dd`는 실행을 중단시키므로 프로덕션 코드에 남기면 페이지 전체가 멈춘다 — 커밋 전 제거를 습관화할 것.
-- `@json`으로 사용자 입력이 섞인 데이터를 그대로 스크립트에 심을 때는 XSS 관점에서 값의 출처를 확인한다 (Blade의 `@json`은 JSON 인코딩만 하며 HTML 컨텍스트 이스케이프를 대신하지 않는다).
+- `@json`은 내부적으로 `Illuminate\Support\Js::from()`을 사용해 `JSON_HEX_TAG`/`JSON_HEX_AMP`/`JSON_HEX_APOS`/`JSON_HEX_QUOT` 플래그로 인코딩하므로, `<script>` 태그 안에 삽입해도 `</script>`로 컨텍스트를 탈출하거나 따옴표를 깨는 공격은 기본적으로 막힌다. 다만 그렇게 만든 JS 값을 다시 `innerHTML` 등으로 HTML에 재해석시키는 코드에 넘기면 그 지점에서 별도의 XSS 위험이 생길 수 있다.
 
 ## 참고
 

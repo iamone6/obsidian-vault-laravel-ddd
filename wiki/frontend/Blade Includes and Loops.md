@@ -93,7 +93,7 @@ related: [[Blade Template Inheritance]], [[Blade Conditionals and Environment]]
 
 ## 주의사항 / 안티패턴
 
-- `@include`는 컴파일 시점에 파일을 그대로 삽입하므로, 같은 partial을 수백 번 `@each`로 반복하면 성능에 영향을 줄 수 있다 — 반복 항목이 컴포넌트 수준으로 무거워지면 [[Blade Component Basics]]로 옮기는 걸 고려한다.
+- `@include`는 컴파일 시점에 텍스트가 삽입되는 게 아니라, 렌더링 시점마다 `$__env->make(...)->render()`를 호출해 대상 뷰를 매번 resolve·render하는 방식으로 동작한다. 같은 partial을 수백 번 `@each`로 반복하면 그만큼 렌더 호출이 누적되어 성능에 영향을 줄 수 있다 — 반복 항목이 컴포넌트 수준으로 무거워지면 [[Blade Component Basics]]로 옮기는 걸 고려한다.
 - `@once`를 빠뜨리고 반복문 안에서 `@push`를 그대로 쓰면 같은 스크립트가 반복 횟수만큼 중복 삽입된다.
 
 ## 참고
