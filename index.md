@@ -109,10 +109,16 @@ Laravel + DDD 위키 페이지 카탈로그. 카테고리별로 정리되어 있
 | [[Tailwind Accessibility]] | 포커스, 색상 대비, 모션, 터치 타깃 체크리스트 |
 | [[Tailwind Build and Performance]] | 빌드 흐름, 배포 체크리스트, 성능 특성 |
 | [[Tailwind v3 to v4 Migration]] | 구조/네이밍/기본값 변화, 마이그레이션 도구 |
+| [[Blade Template Inheritance]] | Controller→Child→Parent 렌더링 흐름, `@yield`/`@section`/`@show`/`@parent`/`@stack` |
+| [[Blade Includes and Loops]] | `@include` 계열, `@each`, `@foreach`/`$loop`, `@once` |
+| [[Blade Conditionals and Environment]] | `@if`/`@auth`/`@env`, `@csrf`/`@method`, `@json`, `@dd`/`@dump` |
+| [[Blade Component Basics]] | `@props`, `$slot`/named slot, `@aware` |
+| [[Blade Component Attributes]] | `$attributes`(ComponentAttributeBag), `:` prefix 타입 규칙 |
+| [[Blade Style Directives]] | `@vite`, `@style`, `@class` |
 
 ---
 
 ## 통계
 
-- 전체 페이지: 54
-- 최종 업데이트: 2026-08-03
+- 전체 페이지: 60
+- 최종 업데이트: 2026-08-12

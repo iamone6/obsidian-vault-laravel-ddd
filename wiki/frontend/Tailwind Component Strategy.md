@@ -2,7 +2,7 @@
 title: Tailwind Component Strategy
 category: frontend
 tags: [frontend, tailwind, blade, component]
-related: [[Tailwind CSS]], [[Tailwind Dynamic Class Pitfall]], [[Action Pattern]]
+related: [[Tailwind CSS]], [[Tailwind Dynamic Class Pitfall]], [[Action Pattern]], [[Blade Component Basics]], [[Blade Component Attributes]], [[Blade Style Directives]]
 ---
 
 # Tailwind Component Strategy
@@ -16,6 +16,8 @@ Tailwind 도입 후 흔히 마주치는 문제: 30개 클래스가 붙은 버튼
 `@apply`로 `.btn-primary`를 만들면 전역 클래스, 네이밍 고민, 삭제 못 하는 CSS가 다시 생기며 결국 예전 CSS 프레임워크로 되돌아간다 — Tailwind 제작자도 이 방식을 기본 전략으로 권장하지 않는다. 대신 **템플릿 엔진의 컴포넌트 기능**을 쓴다.
 
 ## Laravel 구현
+
+이 패턴이 사용하는 `@props`/`$attributes`/`$slot`의 동작 원리 자체는 [[Blade Component Basics]]와 [[Blade Component Attributes]]에서 다룬다. 여기서는 Tailwind 클래스 관리 관점에 집중한다.
 
 `resources/views/components/button.blade.php`:
 
@@ -73,7 +75,7 @@ Tailwind 도입 후 흔히 마주치는 문제: 30개 클래스가 붙은 버튼
 </div>
 ```
 
-내부적으로 `Illuminate\Support\Arr::toCssClasses()`가 동작하며, 조건이 true인 키만 포함된다.
+내부적으로 `Illuminate\Support\Arr::toCssClasses()`가 동작하며, 조건이 true인 키만 포함된다. `@class`/`@style` 문법 자체의 전체 레퍼런스는 [[Blade Style Directives]] 참고.
 
 ### React/Vue를 쓴다면
 
@@ -116,4 +118,7 @@ function Button({ variant = 'primary', className, ...props }) {
 - [[Tailwind CSS]] — 개요, 얻는 것/잃는 것 트레이드오프
 - [[Tailwind Dynamic Class Pitfall]] — variant를 배열로 매핑해야 하는 또 다른 이유
 - [[Action Pattern]] — Laravel에서 책임을 분리하는 다른 관용구와의 비교
-- 소스: `2026-08-03_Tailwind CSS 실전 가이드.md`
+- [[Blade Component Basics]] — `@props`/`$slot`/`@aware` 기본 동작
+- [[Blade Component Attributes]] — `$attributes->merge()`, `:` prefix 타입 규칙
+- [[Blade Style Directives]] — `@class`/`@style`/`@vite` 전체 레퍼런스
+- 소스: `2026-08-03_Tailwind CSS 실전 가이드.md`, `2026-08-12_Laravel Blade 상호작용 가이드.md`
