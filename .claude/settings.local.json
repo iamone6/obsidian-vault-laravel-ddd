@@ -35,7 +35,10 @@
       "Bash(cp \"C:\\\\Users\\\\iamone\\\\Downloads\\\\tailwind-css-guide.md\" \"C:\\\\Users\\\\iamone\\\\Documents\\\\Obsidian Vault\\\\laravel-ddd\\\\sources\\\\2026-08-03_Tailwind CSS 실전 가이드.md\")",
       "WebSearch",
       "WebFetch(domain:medium.com)",
-      "WebFetch(domain:graphify.net)"
+      "WebFetch(domain:graphify.net)",
+      "Bash(git add *)",
+      "Bash(git push *)",
+      "Bash(gh auth *)"
     ]
   }
 }
