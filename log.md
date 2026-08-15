@@ -18,6 +18,8 @@ ACTION 종류:
 
 ---
 
+[2026-08-12] [INGEST] NativePHP for Mobile 실무 가이드 (v4 기준) — 생성: NativePHP Mobile Overview, NativePHP Mobile Environment Setup, NativePHP Mobile Installation, NativePHP SuperNative Architecture, NativePHP Mobile Routing and Navigation, NativePHP EDGE Components, NativePHP Core Plugins, NativePHP Mobile Testing, NativePHP Mobile Deployment, NativePHP Mobile Practical Notes (전부 `wiki/frontend/` 신규, 10개) / 갱신: Livewire and NativePHP(새 NativePHP 상세 페이지들로 교차 링크 보강, 공유 메모리 아키텍처 설명 추가)
+
 [2026-08-12] [INGEST] Livewire 완전 학습 가이드 (v4 기준) — 생성: Livewire Overview, Livewire Render Cycle, Livewire Installation and Components, Livewire Properties, Livewire Actions, Livewire Forms and Validation, Livewire Lifecycle Hooks, Livewire Computed Properties, Livewire Rendering and wire-key, Livewire Loading States, Livewire Events, Livewire Nested Components and Props, Livewire Pagination and File Uploads, Livewire URL and Navigation, Livewire Alpine Integration, Livewire Advanced v4 Features, Livewire Testing, Livewire Common Pitfalls, Livewire and NativePHP (전부 `wiki/frontend/` 신규, 19개)
 
 [2026-08-12] [INGEST] Laravel Blade 상호작용 가이드 — 생성: Blade Template Inheritance, Blade Includes and Loops, Blade Conditionals and Environment, Blade Component Basics, Blade Component Attributes, Blade Style Directives (전부 `wiki/frontend/` 신규) / 갱신: Tailwind Component Strategy(Blade 컴포넌트 세부 페이지로 교차 링크 추가)

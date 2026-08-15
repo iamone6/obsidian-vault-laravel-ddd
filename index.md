@@ -134,10 +134,20 @@ Laravel + DDD 위키 페이지 카탈로그. 카테고리별로 정리되어 있
 | [[Livewire Testing]] | `Livewire::test()`, 주요 assertion |
 | [[Livewire Common Pitfalls]] | 자주 겪는 함정 15개 모음 |
 | [[Livewire and NativePHP]] | NativePHP v3/v4 맥락, 학습 우선순위, 모바일 고려사항 |
+| [[NativePHP Mobile Overview]] | 큰 그림 3가지 핵심 개념, Laravel 웹 ↔ NativePHP 대응표 (허브 페이지) |
+| [[NativePHP Mobile Environment Setup]] | 공통 요구사항, WSL 미지원/iOS Mac 필수 제약, iOS/Android 환경 구축 |
+| [[NativePHP Mobile Installation]] | 설치 순서, `.env` 설정, `native:install`/`native:run`, `nativephp/` 디렉터리 |
+| [[NativePHP SuperNative Architecture]] | 공유 메모리, NativeComponent, EDGE 컴포넌트, 웹뷰 마이그레이션 전략 |
+| [[NativePHP Mobile Routing and Navigation]] | `Route::native()`, `navigate`/`back`/`replace`, `@navigate` 디렉티브 |
+| [[NativePHP EDGE Components]] | `<native:*>` 컴포넌트 카테고리별 전체 목록 |
+| [[NativePHP Core Plugins]] | Biometrics/Camera/Geolocation 등 코어 플러그인과 설치 절차 |
+| [[NativePHP Mobile Testing]] | Interactions/Native Events/Navigation/Accessibility 테스트 영역 |
+| [[NativePHP Mobile Deployment]] | Android/iOS 배포 절차, 버전 관리 env |
+| [[NativePHP Mobile Practical Notes]] | 심화주제 지도, 실무 진행 순서, 라이선스/PHP버전/성숙도 주의사항 |
 
 ---
 
 ## 통계
 
-- 전체 페이지: 79
+- 전체 페이지: 89
 - 최종 업데이트: 2026-08-12
