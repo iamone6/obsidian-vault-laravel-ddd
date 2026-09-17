@@ -2,7 +2,7 @@
 title: Directory Structure
 category: laravel
 tags: [laravel, ddd, structure, module]
-related: [[Bounded Context]], [[Layered Architecture]]
+related: [[Bounded Context]], [[Layered Architecture]], [[Domain Service]], [[Action Pattern]]
 ---
 
 # Directory Structure
@@ -159,6 +159,22 @@ app/
 - HTTP(웹/API), 콘솔 커맨드처럼 "환경에 의존하는" 코드는 전부 `app/`에 둔다. 저자는 이를 별개의 **애플리케이션**(Web 앱, API 앱, Console 앱)으로 구분한다 — 세 애플리케이션이 같은 도메인 코드를 공유한다.
 - 이 구조는 프레임워크 자체를 건드리지 않는다. 설정/부트스트랩 변경이 필요 없어 라라벨 업그레이드에 영향을 주지 않는다.
 
+### `Domain/{Feature}/` 안에서 Application Service vs Domain Service 구분하기
+
+이 2단 구조는 `Domain`/`Application`을 최상위 폴더로 나누지 않는다. [[Action Pattern]]이 이미 "[[Application Service]]의 단순화 버전"이기 때문에, `Domain/{Feature}/Actions/`가 사실상 Application 레이어 역할을 흡수한다. 그럼 [[Domain Service]](특정 Entity 하나에 속하지 않는 순수 계산/판단 로직)는 어디에 둘까 — `Actions/`와 나란히 `Services/`를 형제 폴더로 둔다.
+
+```
+Domain/
+└── Order/
+    ├── Models/
+    ├── Actions/       ← 유스케이스 진입점, 저장/이벤트 디스패치 등 부작용을 가짐
+    ├── Services/       ← Domain Service, 순수 계산만 하고 부작용 없음
+    ├── DataTransferObjects/
+    └── ViewModels/
+```
+
+이건 이론적 제안이 아니라 [[Design Philosophy]]의 "얕은 DDD" 사례(LCA API)가 실제로 쓰는 구조다: `app/Domain/{Materials,Mechanics,Report,...}/{Actions,Services,DTOs,Requests,ViewModels}`. 폴더 위치가 레이어를 강제하지 않으므로, 클래스를 만들 때마다 "이 클래스가 `save()`나 이벤트 디스패치를 호출하는가?"로 판단한다 — 호출하면 `Actions/`, 계산만 하고 끝나면 `Services/`. 자세한 구분 기준표는 [[Domain Service]] 참고.
+
 이 구조의 이점은 "브로드캐스트 관련 기능을 작업 중이면 `Domain/Mail` 폴더로 가면 모든 것이 있다"는 탐색 편의성이다 — 컨트롤러/모델/리퀘스트/리소스가 기술 계층별로 흩어진 기본 Laravel 구조 대비 신규 합류자의 온보딩이 쉬워진다.
 
 ### composer.json으로 도메인 폴더를 오토로드하기
@@ -194,6 +210,7 @@ app/
 
 - [[Bounded Context]] — 컨텍스트 경계 설계
 - [[Layered Architecture]] — 레이어 구조 상세
+- [[Domain Service]] — Martin Joo 2단 구조에서 Application Service(Actions)와 Domain Service(Services)를 구분하는 기준
 - [[Design Philosophy]] — 이 구조가 지키려는 언어 우선 원칙
 - 소스: Domain-Driven Design with Laravel (Martin Joo), Domains And Applications 챕터
 - 소스: Layered Architectures with Laravel (Martin Joo)

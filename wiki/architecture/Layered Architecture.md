@@ -2,7 +2,7 @@
 title: Layered Architecture
 category: architecture
 tags: [architecture, layers, ddd]
-related: [[Directory Structure]], [[Bounded Context]]
+related: [[Directory Structure]], [[Bounded Context]], [[Domain Service]]
 ---
 
 # Layered Architecture
@@ -29,7 +29,7 @@ DDD에서 가장 기본적인 아키텍처. 4개 레이어로 코드를 분리�
 - [[Entity]], [[Value Object]], [[Aggregate]]
 - [[Domain Event]]
 - [[Repository]] 인터페이스
-- Domain Service (특정 엔티티에 속하지 않는 도메인 로직 — 별도 페이지 예정)
+- [[Domain Service]] (특정 엔티티에 속하지 않는 도메인 로직)
 - **의존성 없음**: 프레임워크, ORM, 외부 라이브러리에 의존하지 않는 순수 PHP
 
 ### Application Layer
@@ -92,4 +92,5 @@ $this->app->bind(OrderRepository::class, EloquentOrderRepository::class);
 
 - [[Directory Structure]] — Laravel에서 레이어를 디렉토리로 표현
 - [[Bounded Context]] — 레이어 구조를 감싸는 컨텍스트 경계
+- [[Domain Service]] — Domain 레이어에 속하는 무상태 서비스
 - [[Design Philosophy]] — 이 의존성 규칙이 지키려는 언어 우선 원칙

@@ -2,7 +2,7 @@
 title: Application Service
 category: ddd-core
 tags: [ddd, application-service, use-case]
-related: [[Repository]], [[DTO]], [[CQRS]]
+related: [[Repository]], [[DTO]], [[CQRS]], [[Domain Service]]
 ---
 
 # Application Service
@@ -150,3 +150,4 @@ final class CreateOrderAction
 
 - [[CQRS]] — Command/Query 분리로 Application Service 역할 세분화
 - [[DTO]] — 입/출력 데이터 전달 객체
+- [[Domain Service]] — 부작용 없는 순수 계산/판단을 담당하는 대응 개념(Application Service가 호출)

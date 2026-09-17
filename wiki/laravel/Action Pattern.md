@@ -2,7 +2,7 @@
 title: Action Pattern
 category: laravel
 tags: [laravel, action, single-responsibility]
-related: [[Application Service]], [[DTO]], [[CQRS]]
+related: [[Application Service]], [[DTO]], [[CQRS]], [[Domain Service]]
 ---
 
 # Action Pattern
@@ -181,6 +181,7 @@ class GetOldListingsByUserAction
 ## 참고
 
 - [[Application Service]] — 여러 유스케이스를 묶는 서비스
+- [[Domain Service]] — Action이 호출하는, 부작용 없는 순수 계산 로직(Martin Joo 구조에서는 `Services/`로 형제 폴더에 둔다)
 - [[CQRS]] — Command/Query를 명확히 분리하는 패턴
 - [[Design Philosophy]] — "정답은 없다, 일관성이 중요하다"는 실용주의 원칙
 - 소스: Domain-Driven Design with Laravel (Martin Joo), Actions / Building an E-mail Marketing Software 챕터
