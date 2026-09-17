@@ -38,7 +38,8 @@
       "WebFetch(domain:graphify.net)",
       "Bash(git add *)",
       "Bash(git push *)",
-      "Bash(gh auth *)"
+      "Bash(gh auth *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
